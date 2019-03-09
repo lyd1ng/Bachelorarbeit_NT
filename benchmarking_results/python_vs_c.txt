@@ -1,0 +1,13 @@
+The fdtd was implemented on a 2d universe containing a pml material
+in python using numpy and in c.
+The benchmarking parameters where:
+
+len(x_indices) = len(y_indices) = 100
+max_frequency = 1.5e6
+samplerate_space = 40
+samplerate_time = 10
+pml_widht = pml_height = 20
+ramped_sinus source
+No geometry
+
+In average the implementation in c was faster by a factor of XXX.

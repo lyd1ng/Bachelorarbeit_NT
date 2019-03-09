@@ -1,0 +1,70 @@
+This is BibTeX, Version 0.99d (TeX Live 2018/Arch Linux)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: thesis.aux
+The style file: unsrtnat.bst
+Database file #1: cites.bib
+Warning--empty year in nasa_ea_antenna
+Warning--empty year in mathepedia_numerische_verfahren
+Warning--empty year in advanced_gap_feed
+Warning--empty year in gausz_law_electric
+Warning--empty year in gausz_law_magnetic
+Warning--empty year in amperes_law
+Warning--empty year in induction_law
+Warning--empty year in constitutive
+Warning--empty year in normalize_h_field
+Warning--empty year in fdtd_stabilitaet
+Warning--empty year in approximation_time
+Warning--empty year in diagonal_tensors
+Warning--empty year in dimension_reduction
+Warning--empty year in grid_stability_condition
+Warning--empty year in time_stability_condition
+Warning--empty year in sources
+Warning--empty year in ramped_sin
+Warning--empty year in dirichlet_nbc
+Warning--empty year in introduction_pml
+Warning--empty year in derivation_pml
+Warning--empty year in loss_in_fd
+Warning--empty year in matched_impedance
+Warning--empty year in opencl_overview
+You've used 28 entries,
+            2481 wiz_defined-function locations,
+            647 strings with 7130 characters,
+and the built_in function-call counts, 7707 in all, are:
+= -- 657
+> -- 244
+< -- 26
++ -- 143
+- -- 70
+* -- 368
+:= -- 1182
+add.period$ -- 102
+call.type$ -- 28
+change.case$ -- 53
+chr.to.int$ -- 11
+cite$ -- 51
+duplicate$ -- 412
+empty$ -- 848
+format.name$ -- 100
+if$ -- 1681
+int.to.chr$ -- 18
+int.to.str$ -- 29
+missing$ -- 7
+newline$ -- 166
+num.names$ -- 84
+pop$ -- 372
+preamble$ -- 1
+purify$ -- 28
+quote$ -- 0
+skip$ -- 232
+stack$ -- 0
+substring$ -- 77
+swap$ -- 75
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 187
+warning$ -- 23
+while$ -- 57
+width$ -- 0
+write$ -- 375
+(There were 23 warnings)

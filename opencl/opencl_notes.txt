@@ -1,0 +1,528 @@
+C API
+=====
+
+Platform:
+---------
+Auf einem Rechner koennen mehrere Platformen vorhanden sein.
+Mit jeder Platform ist ein Profil verknuepft, dass die
+Eigenschaften der Platform angibt.
+
+cl_int clGetPlatformIDs(cl_uint num_entries,
+			cl_platform_id* platforms,
+			cl_uint* num_platforms)
+
+Dieser Befehl gibt eine Liste von num_entries vielen moeglichen Platformen
+zurueck. Um alle Platformen aller Typen zu erhalten koennen num_entries gleich 0
+und platforms zu NULL gesetzt werden.
+
+Ein kleines Beispiel um eine Liste aller Platformen zu erhalten:
+
+	cl_int errNum;
+	cl_uint numPlatforms;
+	cl_platform_id* platformIDs;
+	cl_context context = NULL;
+	
+	// Schreibt die Anzahl an Platformen in numPlatforms
+	errNum = clGetPlatformIDs(0, NULL, &numPlatforms);
+	
+	// Nun kann passender Speicher fuer ein PlatformID Array alloziiert werden
+	platformIDs = (cl_platform_id*)alloca(sizeof(cl_platform_id) * numPlatforms);
+
+	// Nun koennen die Platformen gelesen werden
+	errNum = clGetPlatformIDs(numPlatforms, platformIDs, NULL);
+
+
+Mit dem Befehl clGetPlatformInfo koennen Informationen ueber die Platform erfragt 
+werden.
+
+cl_int GetPlatformInfo (cl_platform_id platform,
+			cl_platform_info param_name,
+			size_t param_value_size,
+			void* param_value,
+			size_t param_value_size_ret)
+
+Auch dieser Befehl muss zweimal ausgefuehrt werden um eine Information
+ueber eine Platform zu erfragen. Einmal um die Laenge des zurueckgegebenen
+Wertes zu erfragen, um den Speicher zu alloziieren und das zweite mal
+um die Informationen in den Speicher kopieren.
+
+	cl_int err;
+	size_t size;
+	
+	err = clGetPlatformInfo(id, CL_PLATFORM_NAME, 0, NULL, &size);
+	char* name = (char*)alloca(sizeof(char) * size);
+	err = clGetPlatformInfo(id, CL_PLATFORM_NAME, size, name, NULL);
+
+Device:
+-------
+Jede Platform besitzt eine Liste von Devices die mit dieser
+Platform verknuepft sind. Eine Liste alle Devices kann mit
+dem Befehl clGetDeviceIDs erfragt werden.
+
+cl_int clGetDeviceIDs(cl_platform_id platform,
+		      cl_device_type device_type,
+		      cl_uint num_entries,
+		      cl_device_id *devices,
+		      cl_uint* num_entries)
+
+Der device_type Parameter kann einen der folgenden Werte annehmen:
+
++-------------------------------------------------------------+
+|CL_DEVICE_TYPE_CPU: Der Host Prozessor                       |
+|CL_DEVICE_TYPE_GPU: Die Graphikkarte                         |
+|CL_DEVICE_TYPE_ACCELERATOR: Beschleunigerhardware eg. FPGA   |
+|CL_DEVICE_TYPE_DEFAULT: Default Device                       |
+|CL_DEVICE_TYPE_ALL: Alle Devices der Platform                |
++-------------------------------------------------------------+
+
+Folgender Beispielcode zeigt wie geprueft wird ob es wenigstens ein
+Device gibt und dieses auswaehlt:
+
+	cl_inr errNum;
+	cl_uint numDevices;
+	cl_device_id deviceIDs[1];
+	errNum = clGetDeviceIds(platform, CL_DEVICE_TYPE_GPU, 0, NULL, &numDevices);
+	if (numDevices < 0)
+	{
+		printf("No device found...\n");
+		return -1;
+	}
+	errNum = clGetDeviceIDs(platform, CL_DEVICE_TYPE_GPU, 1, deviceIDs, NULL);
+	
+Auch ueber Devices lassen sich Informationen erfragen, der Befehl dazu lautet
+clGetDeviceInfo.
+
+cl_int clGetDeviceInfo(cl_device_id device, cl_device_info param_name,
+		       size_t param_value_size, void* param_value,
+		       size_t* param_value_size_ret)
+
+Das Schema mit dem solche Funktionen genutzt werden sind immer gleich,
+sie werden einmal aufgerufen um die Groesze der Antwort zu erfragen, um den
+Speicher zu alloziieren und ein zweites mal um die Antwort zu erhalten.
+Bei einigen Parametern steht die Groesze jedoch fest wodurch die Funktion nur
+einmal aufgerufen werden muss.
+
+Context:
+--------
+Der Context ist das Kernstueck von OpenCL Anwendungen. Ein Kontext
+fasst die zu benutzenden Devices und die zu nutzenden Command Queues
+zusammen. Alle Buffer die alloziiert werden werden innerhalb eines
+Kontextes alloziiert. Die OpenCL Spezifikation gibt vor, dass
+alle Devices innerhalb dieses Kontexts die Aenderungen des Buffers
+an Synchronistationspunkten mitbekommen.
+Ein Kontext kann mit dem Befehl clCreateContext erzeugt werden.
+
+cl_context clCreateContext(const cl_context_properties* properties,
+			   cl_uint num_devices,
+			   const cl_device_id* devices,
+			   void (CL_CALLBACK* pfn_notify)(
+			   	 const char* errinfo,
+				 const void* private_info,
+				 size_t* cb,
+				 void* user_data),
+				 void* user_data,
+				 cl_int *errcode_ret)
+
+Bei dem Parameter pfn_notify handelt es sich um eine Callbackfunktion,
+di die Parameter errinfo, private_info, cb und user_data entgegennimmt,
+wobei private_info und cb von der OpenCL API gesetzt werden.
+Der Parameter user_data wird an die Callback-Funktion gereicht. Ist
+die Callback-Funktion NULL kann auch user_data NULL sein.
+Der erste Parameter ist eine Liste von cl_context_properties. Es
+gibt nur eine gueltige Property, naemlich CL_CONTEXT_PLATFORM.
+Die Liste besteht aus Property-Value-Paaren und wird mit einer 0 beendet.
+Auch ueber Kontexte koennen Informationen erfragt werden. Der Befehl lautet
+clGetContextInfo.
+
+cl_int clGetContextInfo(cl_context context,
+			cl_context_info param_name,
+			size_t param_value_size,
+			void* param_value,
+			size_t* param_value_size_ret)
+
+Der Parameter param name kann folgende Werte annehmen:
+
++-------------------------------------------------------------------------------------+
+|CL_CONTEXT_REFERENCE_COUNT (cl_uint): Der Context Referenz Zaehler                   |
+|CL_CONTEXT_NUM_DEVICES (cl_uint): Die Anzahl an Devices im Kontext                   |
+|CL_CONTEXT_DEVICES (cl_device_id[]): Eine Liste von Devices im Kontext               |
+|CL_CONTEXT_PROPERTIES (cl_context_properties[]) Eine Liste von Kontext Properties.   |
++-------------------------------------------------------------------------------------+
+
+Am Ende einer OpenCL Applikation muss der Context wieder frei gegeben werden.
+Der Befehl dazu laueter clReleaseContext.
+
+cl_int clReleaseContext(cl_context context)
+
+
+Program:
+--------
+Der OpenCL Code wird zur Laufzeit der OpenCL Applikation compiliert um
+platformunabhaengigkeit zu erzeugen. Ein Programmobjekt ist in der OpenCL API
+die Representation einer OpenCL-Sourcedatei, oder eines schon kompilierten
+OpenCL-Binaryblobs. Mit clCreateProgrameWithSource kann ein Programm von einer
+Sourcedatei erzeugt werden.
+
+cl_program clCreateProgrameWithSource(cl_context context,
+				      cl_uint count,
+				      const char **strings,
+				      const size_t* lengths,
+				      cl_int* errcode_ret)
+
+Hierbei ist der Parameter strings ein Array von C-Strings, dass den Sourcecode
+beinhaltet und lengths ein Array, dass die Laengen der C-Strings beinhaltet.
+Der Parameter count gibt die Anzahl an strings und damit auch die Laenge des
+Array lengths fest.
+Klassischerweise besteht der naechste Schritt darin das Programm zu kompilieren.
+Der Befehl dafuer lautet clBuildProgram.
+
+cl_int clBuildProgram(cl_program program,
+		      cl_uint num_devices,
+		      const cl_device_id* device_list,
+		      const char* options,
+		      void (CL_CALLBACK *pfn_notify)
+		      	(cl_program program,
+			void *user_data),
+		      void* user_data)
+
+Wird eine Callbackfunktion pfn_notify angegeben so wird clBuildProgram
+asynchron ausgefuehrt und pfn_notify aufgerufen sobald der Kompilierungsvorgang
+abgeschlossen ist. Ansonsten ist die Funktion clBuildProgramm blockend!
+Sollte es einen Fehler beim Buildvorgang geben, so kann der Buildlog mit
+dem Befehl clGetProgramBuildInfo erfragt werdene.
+
+clGetProgramBuildInfo(cl_program program,
+		      cl_device_id device,
+		      cl_program_build_info param_name,
+		      size_t param_value_size,
+		      void* param_value,
+		      size_t* param_value_size_ret)
+
+Der Parameter device gibt an fuer welches Device die Parameter angefragt werden
+sollen. Das ist notwendig, da die Funktion clBuildProgramm den Code fuer jedes
+Device kompilieren muss. Der Parameter param_name gibt an welche Information
+angefragt werden soll. Er kann folgende Werte annehmen:
+
++--------------------------------------------------------------------------+
+|CL_PROGRAM_BUILD_STATUS (cl_build_status): Der Status des Buildvorgangs   |
+|CL_PROGRAM_BUILD_OPTIONS (char[]): Die Buildoptions                       |
+|CL_PROGRAM_BUILD_LOG (char[]): Ein Log des letzten Buildvorgangs          |
++--------------------------------------------------------------------------+
+
+Wird ein Programm nicht mehr benoetigt, so kann es released werden:
+
+cl_int clReleaseProgram(cl_program program)
+
+Sind alle Programme fertig gebaut kann der Compiler ebenfalls released werden,
+das gibt ein paar Ressourcen frei. Sollte danach wieder clBuildProgram aufgerufen
+werden, so wird der Compiler automatisch wieder initialisiert.
+Der Befehl dazu lautet clUnloadCompier.
+
+cl_int clUnloadCompiler(void)
+
+Kernel Objects:
+---------------
+In OpenCL werden die Programme die parallel auf Workitems ausgefuehrt werden
+Kernels genannt. Ein Kernel-Object in der OpenCL API wird genutzt um die
+Parameter der Kernelfunktionen zu setzen und Informationen zu erfragen.
+Kernel-Objekte werden aus cl_program Objekten erzeugt.
+Der Befehl dazu lautet clCreateKernel.
+
+cl_kernel clCreateKernel(cl_program program,
+			 const char* kernel_name,
+			 cl_int* errcode_ret)
+
+Da in einer OpenCL-Sourcedatei mehrere Kernel definiert sein koennen muss der
+Name mit dem Parameter kernel_name angegeben werden.
+Die Argumente der Kernelfunktion koennen mit clSetKernelArg gesetzt werden.
+Der Funktionsname ist hier im Singular, da jedes Argument einzeln gesetzt werden muss.
+
+cl_int clSetKernelArg(cl_kernel kernel,
+		      cl_uint arg_index,
+		      size_t* arg_size,
+		      const void * arg_value)
+
+Die Speicherbereiche auf die der arg_value Zeiger zeigt werden von der OpenCL API
+kopiert, weshalb der Zeiger danach fuer andere Argumente benutzt werden darf.
+Es koennen auch Informationen uber das Kernelobjekt erfragt werden.
+Der Befehl dazu lautet clGetKernelInfo.
+
+cl_int clGetKernelInfo(cl_kernel kernel,
+		       cl_kernel_info param_name,
+		       size_t param_value_size,
+		       void* param_value,
+		       size_t* param_value_size_ret)
+
+Der Parameter param_name gibt die Information an die erfragt werden sollte, 
+er kann folgende Werte annehmen:
+
++---------------------------------------------------------------------------------------+
+|CL_KERNEL_REFERENCE_COUNT (cl_uint): Die Anzahl an Referenzen auf dieses Kernelobjekt  |
+|CL_KERNEL_FUNCTION_NAME (char[]): Der Name der Kernelfunktion                          |
+|CL_KERNEL_NUM_ARGS (cl_uint): Die Nummer an Kernelargumenten                           |
++---------------------------------------------------------------------------------------+
+
+Kernel koennen mit dem Befehl clEnqueueNDRangeKernel ausgefuehrt werden.
+
+cl_int clEnqueueNDRangeKernel ( cl_command_queue command_queue,
+				cl_kernel kernel,
+				cl_uint work_dim,
+				const size_t *global_work_offset,
+				const size_t *global_work_size,
+				const size_t *local_work_size,
+				cl_uint num_events_in_wait_list,
+				const cl_event *event_wait_list,
+				cl_event *event)
+
+Wird ein Kernelobjekt nicht mehr benoetigt kann es released werden.
+Der Befehl dazu lauter clReleaseKernel.
+
+cl_int clReleaseKernel(void)
+
+Buffer:
+-------
+Buffer sind kontextbezogene Speicherobjekte. Jeder Buffer wird von allen
+Devices eines Kontexts geteilt. Sind ein Device und ein Buffer nicht im
+gleichen Kontext ist eine Lese/Schreib-Vorgang nur ueber den Speicher
+des Hosts zu erreichen.
+Der Befehl clCreateBuffer erzeugt ein cl_mem-Objekt.
+
+cl_mem clCreateBuffer(cl_context context,
+		      cl_mem_flags* flags,
+		      size_t size,
+		      void* host_prt,
+		      cl_int* errcode_ret)
+
+Der Parameter flags kann einen der folgenden Werte annehmen:
+
+CL_MEM_READ_WRITE: Der Kernel kann lesen und schreiben. (Default)
+CL_MEM_WRITE_ONLY: Der Kernel kann nur schreiben
+CL_MEM_READ_ONLY: Der Kernel kann nur lesen
+CL_MEM_USE_HOST_PTR: Gibt an, dass der Speicher unter host_ptr als Speicherbereich des
+		     cl_mem-Objekts genutzt werden soll.
+CL_MEM_ALLOC_HOST_PTR: Gibt an, dass der Speicher des cl_mem-Objektes in einem Bereich
+		       alloziiert werden soll, der fuer den Host ansprechbar ist.
+		       Dieses Flag kann nicht mit CL_MEM_USE_HOST_PTR verwendet werden.
+CL_MEM_COPY_HOST_PTR: Gibt an, dass neuer Speicher aloziiert werden und die Daten
+		      unter host_ptr dorthin kopiert werden sollen.
+		      Kann mit CL_MEM_ALLOC_HOST_PTR verwendet werden, dann wird
+		      der Buffer in hosterreichbarem Speicher alloziiert.
+
+Wird ein Buffer nicht mehr benoetigt, so kann er released werden.
+Der Befehl dazu lautet clReleaseBuffer.
+
+cl_int clReleaseBuffer(cl_mem buffer)
+
+Auch ueber cl_mem-Objekte lassen sich Informationen erfragen.
+Der Befehl dazu lautet clGetMemObjectInfo.
+
+cl_int clGetMemObjectInfo(cl_mem buffer,
+			  cl_mem_info param_name,
+			  size_t param_value_size,
+			  void* param_value,
+			  size_t *param_value_size_ret)
+
+Der Parameter param_name gibt die Information an, die erfragt werden soll.
+Hier sind drei wichtige von vielen Werten angegeben die param_name annehmen kann:
+
++----------------------------------------------------------------------------------------+
+|CL_MEM_TYPE (cl_mem_object_type): Fuer Buffer wird CL_MEM_OBJECT_BUFFER zurueckgegeben  |
+|CL_MEM_FLAGS (cl_mem_flags): Gibt die Buffer Flags zurueck                              |
+|CL_MEM_SIZE (size_t): Gibt die Groesze des Buffers in Byte an                           |
++----------------------------------------------------------------------------------------+
+
+Reading and Writing a Buffer:
+-----------------------------
+
+cl_int clEnqueWriteBuffer(cl_command_queue command_queue,
+			  cl_mem buffer,
+			  cl_bool blocking_write,
+			  size_t offset,
+			  size_t cb,
+			  void* ptr,
+			  cl_uint num_events_in_wait_list,
+			  const cl_event* event_wait_list,
+			  cl_event* event)
+
+Der Parameter blocking_write gibt an, ob die Funktion blockieren soll solange
+die Daten geschrieben werden, offset gibt einen Offset in Bytes im Zielbuffer an
+ab dem geschrieben werden soll, cb gibt die Anzahl in Bytes an, die geschrieben
+werden sollen. Der Zeiger ptr gibt an welche Daten geschrieben werden sollen.
+Sollten Events zur Synchronisation verwendet werden, so gibt num_events_in_wait_list
+die Laenge der event_wait_list an. Die event_wait_list ist eine Liste und
+beinhaltet alle Events auf die gewartet werden sollen. Das Event event
+wird geworfen, wenn der Schreibvorgang abgeschlossen wurde.
+
+cl_int clEnqueueReadBuffer(cl_command_queue command_queue,
+			   cl_mem_buffer,
+			   cl_bool blocking_read,
+			   size_t offset,
+			   size_t cb,
+			   void* ptr,
+			   cl_uint num_events_in_wait_list,
+			   const cl_event* event_wait_list,
+			   cl_event* event)
+
+Alle Parameter verhalten sich wie bei clEnqueueWriteBuffer, blosz ist
+die Lese/Schreib-Richtung vertauscht.
+Haeufig ist gefordert, dass Daten vom einen in den anderen Buffer kopiert
+werden muesse. Das ist zwar ueber ein Lese- und Schreibvorgang ueber den
+Host realisierbar kann aber auch von OpenCL durchgefuehrt werden.
+Der Befehl dazu lautet clEnqueuCopyBuffer.
+
+cl_int clEnqueueCopyBuffer(cl_command_queue queue,
+			   cl_mem src_buffer,
+			   cl_mem dst_buffer,
+			   size_t src_offset,
+			   size_t dst_offset,
+			   size_t cb,
+			   uint num_events_in_wait_list,
+			   const cl_event* event_wait_list,
+			   cl_event* event)
+
+Diese drei Funktionen gibt es jeweils nochmal fuer ein Rechteck oder ein Kubus
+fuer 2d oder 3d Probleme. Sie muessen nur verwendet werden wenn es darum geht
+Ausschnitte zu lesen oder zu beschreiben. Wenn der gesamte Inhalt gelesen bezw.
+geschrieben werden soll ist die 1d Funktion zu nutzen.
+
+Images:
+-------
+OpenCL ist eine Architektur um Code auf der GPU auszufuehren.
+Diese ist urspruenglich dafuer gedacht gewesen Graphiken
+hochperformant zu errechnen; daher bietet auch OpenCL die
+Moeglichkeit mit Bildern zu arbeiten. Es gibt 2d und 3d Bilder.
+
+cl_mem clCreateImage2d(cl_context context,
+		       cl_mem_flags flags,
+		       const cl_image_format* image_format,
+		       size_t image_width, 
+		       size_t image_height,
+		       size_t image_row_pitch,
+		       void* host_ptr,
+		       cl_int* errcode_ret)
+
+Der Parameter image_format gibt das Format des Bildes an.
+Am Interessantesten ist hier der Parameter fuer das RGB und RGBA Format:
+
+CL_RGB: Das RGB Format
+CL_RGBA: Das RGBA Format
+
+Der Parameter row_pitch gibt den Linestride des Bildes, also den Abstand
+zwischen zwei Zeilen in 1d Speicher an. Ist der Parameter 0 wird
+image_width * bytes_per_pixel angenommen
+
+cl_mem clCreateImage3d(cl_context context,
+		       cl_mem_flags flags,
+		       const cl_image_format* image_format,
+		       size_t image_width, 
+		       size_t image_height,
+		       size_t image_depth,
+		       size_t image_row_pitch,
+		       size_t image_slice_pitch,
+		       void* host_ptr,
+		       cl_int* errcode_ret)
+
+
+Der Parameter image_slice_pitch gibt den Abstand zwischen zwei Ebenen
+des 3d Bildes im 1d Speicher an.
+Images muessen ueber besondere Funktionen zwischen dem Host und dem Device
+transferiert werden.
+
+cl_int clEnqueueReadImage(cl_command_queue command_queue,
+			  cl_mem image,
+			  cl_bool blocking_read,
+			  const size_t origin[3],
+			  const size_t region[3],
+			  size_t row_pitch,
+			  size_t slice_pitch,
+			  void* ptr,
+			  cl_uint num_events_in_event_list,
+			  const cl_event* event_wait_list,
+			  cl_event* event)
+
+Dieser Befehl gilt fuer 2d und 3d Bilder. Fuer 2d Bilder muss die dritte
+Dimension von origin und region gleich 0 und 1 sein. Der slice_pitch von
+2d Bilder muss auch mit 0 angegeben werden.
+Um Bilder zu schreiben nutzt man clEnqueueWriteImage.
+
+cl_int clEnqueueWriteImage(cl_command_queue command_queue,
+			   cl_mem image,
+			   cl_bool blocking_read,
+			   const size_t origin[3],
+			   const size_t region[3],
+			   size_t input_row_pitch,
+			   size_t input_slice_pitch,
+			   const void* ptr,
+			   cl_uint num_events_in_wait_list,
+			   const cl_event* event_wait_list,
+			   cl_event* event)
+
+Alle Parameter verhalten sich wie bei clEnqueueReadImage.
+Soll ein Imagebuffer kopiert werden verwendet man clEnqueueCopyImage.
+
+cl_int clEnqueueCopyImage(cl_command_queue queue,
+			  cl_mem src_image,
+			  cl_mem dst_image,
+			  const size_t src_origin[3],
+			  const size_t dst_origin[3],
+			  const size_t region[3],
+			  cl_uint num_events_in_wait_list,
+			  const cl_event *event_wait_list,
+			  cl_event* event)
+
+Wie auch Buffer und Subbuffer koennen Bilder direkt in den Hostspeicher
+gemappt werden. Dafuer nutzt man den Befehl clEnqueueMapImage.
+
+void* clEnqueueMapImage(cl_command_queue command_queue,
+			cl_mem image,
+			cl_bool blocking_map,
+			cl_map_flags map_flags,
+			const size_t origin[3],
+			const size_t region[3],
+			size_t* image_row_pitch,
+			size_t* image_slice_pitch,
+			cl_uint num_events_in_wait_list,
+			const cl_event* event_wait_list,
+			cl_event* event,
+			void* errcode_ret)
+
+
+Um ein Image im OpenCL Kernel zu lesen wird ein sample_t Objekt benoetigt.
+Das kann entweder als Argument mitgereicht werden oder innerhalb des
+Kernels erzeugt. Das passiert durch die Veroderung von drei sampler-spezifischen
+Parametern. eg:
+
+const sample_t sampler = CLK_NORMALIZED_COORDS_TRUE | CLK_ADDRESS_REPEAT
+				CLK_FILTER_NEAREST;
+
+Der erste Parameter kann folgender Werte annehmen:
+
++-----------------------------+
+|CLK_NORMALIZED_COORDS_TRUE   |
+|CLK_NORMALIZED_COORDS_FALSE  |
++-----------------------------+
+
+Dieser Parameter gibt an, ob die Koordinaten normalisiert oder unnormalisiert
+interpretiert werden sollen.
+Der zweite Parameter gibt wie Faelle behandelt werden sollen in denen Pixel
+auszerhalb des Bildes angesprochen werden sollen. Er kann eine der folgenden
+Werte annehmen:
+
++------------------------------------------------------------------------------------+
+|CLK_ADDRESS_REPEAT: Ungueltige Koordinaten werden in den gueligen Bereich gewrappt. |
+|CLK_ADDRESS_CLAMP_TO_EDGE: Ungueltige Koordinaten werden auf den Rand des Bildes    |
+|			   beschnitten                                               |
+|CLK_ADDRESS_CLAMP: Ungueltige Koordinaten geben eine definierte Randfarbe zurueck.  |
+|		   Die Randfarbe ist schwarz (0, 0, 0, 1) oder (0, 0, 0, 0)          |
+|		   je nach Pixelformat                                               |
++------------------------------------------------------------------------------------+
+
+Der letzte Parameter gibt an, wie Pixelwerte ermittelt werden sollen, wenn die
+Koordinate auf keinen Pixel eindeutig referenziert. Das ist bei normalisierten
+Koordinaten haeufiger der Fall. Er kann einen der beiden folgenden Parameter
+annehmen:
+
++---------------------------------------------------------------------------+
+|CLK_FILTER_NEAREST: Gibt den naechsten (in Manhattendistanz) Pixel zurueck |
+|CLK_FILTER_LINEAR: Interpoliert bilinear zwischen den umliegenden Pixeln.  |
++---------------------------------------------------------------------------+

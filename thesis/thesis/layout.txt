@@ -1,0 +1,69 @@
+Vorwort:
+--------
+Warum sind Simulationen von Antennen interessant?
+	Antennendesign ist analytisch nicht moeglich
+	und passiert interaktiv mit einem Simulationsprogramm.
+Welche Verfahren zum Loesen von Differentialgleichungen gibt es?
+	Einen kleinen Ueberblick liefern und andeuten, dass sich
+	mathematisch alle Loesungsverfahren aus einer
+	Projektion ergeben (Zitat aus bis jetzt unbekanntem Buch)
+Weshalb bietet sich die FDTD an?
+	Sie ist die leichteste Methode, ausreichend und liefert
+	einen iteratives Loesungsverfahren.
+Weshalb ist eine Hardwarebeschleunigung interessant?
+	Die FDTD ist zeitintensiv, da fuer jeden Zeitschritt
+	das gesamte Universum berrechnet werden muss und fuer
+	jede Zelle einige Berrechnungen durchgefuehrt werden muessen.
+
+
+Grundlagen der FDTD zum Loesen der Maxwellgleichungen:
+------------------------------------------------------
+> Generelles Erklaeren der FDTD-Methode
+> Einfuehren der Maxwellgleichungen, direkt erklaeren, dass
+  Sigmaterme ignoriert werden.
+> Normalisieren der Maxwellgleichung um den numerischen
+  Fehler zu verringern
+> Erklaeren des rot-Operators und daraus das Yee-Grid ableiten
+> Anwenden der FDTD auf die Maxwellgleichungen
+> Auf die numerische Randbedingung eingehen und die Dirichlet-
+  Randbedingung einfuehren.
+  Probleme durch die Dirichlet-Randbedingun erlauetern.
+> Den Gedanken der PML erlaeutern
+> PML mathematisch herleiten, Plots zeigen, dass sie funktioniert
+> Reduktion auf den 1d- und 2d-Fall
+> Wann koennen die Dimensionen reduziert werden?
+	Immer wenn das Problem in einer Dimension als unendlich
+	ausgedehnt angenommen werden kann. eg. Hornstrahler
+	Das ist bei Drahtantennen nicht der Fall.
+> Erklaeren wie Metallgeometrien gesetzt werden koennen.
+
+Hardwarebeschleunigung:
+-----------------------
+> Wann ist ein Problem parallelisierbar?
+	Ein Problem is parallelisierbar wenn die Einzelberechnungen
+	unabhaengig geloest werden koennen
+> Grundkonzept von OpenCL erlaeutern
+> Beide Implementierungen vorstellen welche Vor- Nachteile haben sie?
+	Die noiter-Impl kann Videos erzeugen und erlaubt komplexere
+	und flexiblere Quellen.
+	Die iter-Impl kann keine Videos erzeugen und Quellen muessen
+	in den GPU-Kernel implementiert werden, es koennen nur
+	schwerer Quellen unterschiedlicher Arten implementiert werden,
+	da Quellen ueber ein source-char-Array gesetzt werden.
+> Auf den Bug in der iter-Impl eingehen.
+> Benchmarking-Ergebnise anzeigen.
+
+
+Beispiel einer lambda-Dipolantenne:
+-----------------------------------
+> Wie wurde die Geometry gesetzt?
+	Code angeben
+> Plots zeigen und genau angeben was zu sehen ist.
+
+Probleme und Aussicht:
+----------------------
+> Nah- und Fernfeldproblem:
+	Entweder mehr Raum simulieren,
+	oder eine Nah-zu-Fernfeldtrafo inmplementieren
+> Messpunkte verteilen und daraus die Abstrahlcharacteristik
+  ermitteln.

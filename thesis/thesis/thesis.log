@@ -1,0 +1,696 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.1.27)  8 MAR 2019 22:19
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**thesis.tex
+(./thesis.tex
+LaTeX2e <2018-04-01> patch level 5
+(/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-dist/tex/latex/cite/cite.sty
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+(/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks14
+\ex@=\dimen103
+))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip11
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks15
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks16
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks17
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks18
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+(/usr/share/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+)
+(/usr/share/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texmf-dist/tex/generic/xstring/xstring.tex
+\@xs@message=\write3
+\integerpart=\count100
+\decimalpart=\count101
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+(/usr/share/texmf-dist/tex/latex/trfsigns/trfsigns.sty
+Package: trfsigns 
+)
+(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks19
+\verbatim@line=\toks20
+\verbatim@in@stream=\read1
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+\lst@mode=\count102
+\lst@gtempboxa=\box28
+\lst@token=\toks22
+\lst@length=\count103
+\lst@currlwidth=\dimen112
+\lst@column=\count104
+\lst@pos=\count105
+\lst@lostspace=\dimen113
+\lst@width=\dimen114
+\lst@newlines=\count106
+\lst@lineno=\count107
+\lst@maxwidth=\dimen115
+
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+\c@lstnumber=\count108
+\lst@skipnumbers=\count109
+\lst@framebox=\box29
+)
+(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2018/09/02 1.7 listings configuration
+))
+Package: listings 2018/09/02 1.7 (Carsten Heinz)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+)
+\c@caption@flags=\count110
+\c@ContinuedFloat=\count111
+Package caption Info: listings package is loaded.
+)
+(/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count112
+\float@exts=\toks23
+\float@box=\box30
+\@float@everytoks=\toks24
+\@floatcapt=\box31
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2018/09/02 1.7 listings language file
+)
+(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2018/09/02 1.7 (Carsten Heinz)
+) (./thesis.aux)
+\openout1 = `thesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+\c@lstlisting=\count113
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count114
+\scratchdimen=\dimen125
+\scratchbox=\box32
+\nofMPsegments=\count115
+\nofMParguments=\count116
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count117
+\MPscratchDim=\dimen126
+\MPnumerator=\count118
+\makeMPintoPDFobject=\count119
+\everyMPtoPDFconversion=\toks26
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 81.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 81.
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (8.42293pt too wide) in paragraph at lines 141--141
+[]\OT1/cmr/bx/n/14.4 Loesen der Maxwell-gle-ichun-gen durch die FDTD-
+ []
+
+
+Overfull \hbox (11.98985pt too wide) in paragraph at lines 170--174
+\OT1/cmr/m/n/10.95 wobei $[]$ die mag-netis-che Fluss-dichte ist. Es gibt keine
+ mag-netis-chen Monopole,
+ []
+
+[3] [4]
+Overfull \hbox (10.31323pt too wide) in paragraph at lines 220--223
+\OT1/cmr/m/n/10.95 Das E- und H-Feld sind durch die Ma-te-ri-alimpedanz $\OML/c
+mm/m/it/10.95 ^^Q$ \OT1/cmr/m/n/10.95 mit einan-der verknuepft,
+ []
+
+[5] [6] [7]
+Overfull \hbox (68.46384pt too wide) detected at line 346
+[]
+ []
+
+[8]
+Overfull \hbox (1.83708pt too wide) in paragraph at lines 346--349
+\OT1/cmr/m/n/10.95 ichung (44), so faellt auf, dass auch hier die Sta-bil-i-tae
+ts-be-din-gung der FDTD-
+ []
+
+
+Overfull \hbox (30.70438pt too wide) detected at line 354
+[]
+ []
+
+[9]
+Overfull \hbox (68.46384pt too wide) detected at line 380
+[]
+ []
+
+
+Overfull \hbox (72.84451pt too wide) detected at line 391
+[]
+ []
+
+[10]
+Overfull \hbox (7.1625pt too wide) in paragraph at lines 398--398
+[]\OT1/cmr/bx/n/12 Physikalische Sta-bil-i-taets-be-din-gun-gen fuer fi-nite Di
+f-feren-
+ []
+
+
+Overfull \hbox (12.54373pt too wide) in paragraph at lines 399--405
+\OT1/cmr/m/n/10.95 FDTD-Methode Dif-fer-en-tial-gle-ichun-gen in-dem die Dif-fe
+r-en-tialquo-tien-ten durch
+ []
+
+[11] [12]
+Overfull \hbox (94.53636pt too wide) detected at line 442
+[]
+ []
+
+[13] [14] [15] [16] [17]
+Overfull \hbox (32.69576pt too wide) detected at line 603
+[]
+ []
+
+
+Overfull \hbox (7.82922pt too wide) in paragraph at lines 603--607
+\OT1/cmr/m/n/10.95 Die Rueck-trans-for-ma-tion kann auf-grund der Lin-ear-i-tae
+t-seigen-schaft der Fouri-
+ []
+
+
+Overfull \hbox (8.184pt too wide) in paragraph at lines 603--607
+\OT1/cmr/m/n/10.95 er-trans-for-ma-tion fuer je-den Term einzeln durchge-fuehrt
+. Der Uber-sichtlichkeit
+ []
+
+[18]
+Overfull \hbox (19.87549pt too wide) detected at line 619
+[]
+ []
+
+
+Overfull \hbox (31.76064pt too wide) detected at line 633
+[]
+ []
+
+[19]
+Overfull \hbox (615.90422pt too wide) detected at line 645
+[]
+ []
+
+[20]
+Overfull \hbox (22.60228pt too wide) detected at line 661
+[]
+ []
+
+[21]
+Overfull \hbox (60.99672pt too wide) detected at line 686
+[]
+ []
+
+[22] [23]
+Overfull \hbox (5.852pt too wide) in paragraph at lines 718--750
+\OT1/cmr/m/n/10.95 Moeglichkeiten, die ich be-sprechen moechte, da sie die Form
+ der let-z-tendlichen
+ []
+
+
+Overfull \hbox (14.23698pt too wide) in paragraph at lines 718--750
+\OT1/cmr/m/n/10.95 Im-ple-men-tierung bee-in-flusst hat. Se-quen-tiell kann man
+ die Dirichlet-Boundary-
+ []
+
+
+Overfull \hbox (5.21335pt too wide) in paragraph at lines 718--750
+\OT1/cmr/m/n/10.95 Condition im-ple-men-tieren in-dem man die Berrech-nung der 
+Rand-feld-staerkew-
+ []
+
+[24]
+Overfull \hbox (0.68129pt too wide) in paragraph at lines 752--754
+\OT1/cmr/m/n/10.95 warebeschle-u-nigten Im-ple-men-tierun-gen auf Ko-r-rek-thei
+t zu ue-ber-prue-fen und
+ []
+
+(./fdtd3d_seq.c
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 2.
+ (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2.
+) [25]
+(./fdtd3d_noiter.cl
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+ [26]) [27] (./fdtd3d_iter.cl [28] [29])
+Overfull \hbox (0.52629pt too wide) in paragraph at lines 795--802
+[]\OT1/cmr/m/n/10.95 Die Quelle wurde durch einen Quel-len-fak-torar-ray im-ple
+-men-tiert das jeder
+ []
+
+<./example-image.png, id=109, 803.0pt x 602.25pt>
+File: ./example-image.png Graphic file (type png)
+<use ./example-image.png>
+Package pdftex.def Info: ./example-image.png  used on input line 814.
+(pdftex.def)             Requested size: 360.0pt x 270.00833pt.
+[30] (./thesis.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+[]\OT1/cmr/m/n/10.95 Al Globus,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+\OT1/cmr/m/n/10.95 Derek S. Lin-den, and Ja-son D. John.  Au-to-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--13
+\OT1/cmr/m/n/10.95 mated an-tenna de-sign with evo-lu-tion-ary al-go-rithms.
+ []
+
+
+Overfull \hbox (108.38696pt too wide) in paragraph at lines 9--13
+\OT1/cmr/m/n/10.95 "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.10
+2.9841&rep=rep1&type=pdf". 
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.28 \newblock "https://mathepedia.de/Numerische_
+                                                 Verfahren.html".
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.29 
+     
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.29 
+     
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--29
+[]\OT1/cmr/m/n/10.95 Thomas Ste-un-feld.  Liste nu-merischer ver-fahren.
+ []
+
+[31 <./example-image.png>]
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.29 
+     
+? 
+
+Overfull \hbox (85.8786pt too wide) in paragraph at lines 31--36
+\OT1/cmr/m/n/10.95 "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.46
+1.3208&rep=rep1&type=pdf". 
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 38--43
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Lec-ture 4 -- elec-tro-mag-net-ics 
+and
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 45--50
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Lec-ture 4 -- elec-tro-mag-net-ics 
+and
+ []
+
+
+Underfull \hbox (badness 2689) in paragraph at lines 52--57
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Lec-ture 4 -- elec-tro-mag-net-ics 
+and
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 59--64
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Lec-ture 4 -- elec-tro-mag-net-ics 
+and
+ []
+
+
+Underfull \hbox (badness 2689) in paragraph at lines 66--71
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Lec-ture 4 -- elec-tro-mag-net-ics 
+and
+ []
+
+
+Underfull \hbox (badness 5217) in paragraph at lines 73--78
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Lec-ture 5 -- for-mu-la-tion of 1d
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 80--85
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Lec-ture 4 -- elec-tro-mag-net-ics 
+and
+ []
+
+
+Underfull \hbox (badness 2495) in paragraph at lines 87--92
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Lec-ture 4 -- elec-tro-mag-net-ics 
+and
+ []
+
+
+Underfull \hbox (badness 5274) in paragraph at lines 94--99
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Lec-ture 5 -- for-mu-la-tion of 1d
+ []
+
+[32]
+! Missing $ inserted.
+<inserted text> 
+                $
+l.111 \newblock "http://emlab.utep.edu/ee4386_
+                                              5301cmee/Topic 2b -- Building
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.114 
+      
+? 
+! Missing } inserted.
+<inserted text> 
+                }
+l.114 
+      
+? 
+
+Underfull \hbox (badness 2573) in paragraph at lines 109--114
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Topic 2b build-ing ge-ome-tries int
+o
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 109--114
+\OT1/cmr/m/n/10.95 data ar-rays.  "http://emlab.utep.edu/ee4386$[]301\OML/cmm/m
+/it/10.95 cmee=Topic\OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 b \OMS/cmsy/m/n/10.
+95 ^^@
+ []
+
+! Extra }, or forgotten \endgroup.
+\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.114 
+      
+? 
+
+Underfull \hbox (badness 1292) in paragraph at lines 130--135
+\OT1/cmr/m/n/10.95 "http://emlab.utep.edu/ee5390fdtd/Lecture 6 -- Im-ple-men-ta
+-tion of 1D
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--142
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  Im-ple-men-ta-tion of 1d fdtd.
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 137--142
+\OT1/cmr/m/n/10.95 "http://emlab.utep.edu/ee5390fdtd/Lecture 6 -- Im-ple-men-ta
+-tion of 1D
+ []
+
+
+Underfull \hbox (badness 1292) in paragraph at lines 144--149
+\OT1/cmr/m/n/10.95 "http://emlab.utep.edu/ee5390fdtd/Lecture 6 -- Im-ple-men-ta
+-tion of 1D
+ []
+
+
+Underfull \hbox (badness 8132) in paragraph at lines 151--155
+[]\OT1/cmr/m/n/10.95 John Schnei-der.  Chap-ter 11 per-fectly matched layer.
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 157--161
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  The per-fectly matched layer (pml).
+
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 163--168
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  The per-fectly matched layer (pml).
+
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 170--175
+[]\OT1/cmr/m/n/10.95 Prof. Ray-mond Rumpf.  The per-fectly matched layer (pml).
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--180
+[]\OT1/cmr/m/n/10.95 Khronos Group.  Opencl overview.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--187
+[]\OT1/cmr/m/n/10.95 Aaftab
+ []
+
+[33]) [34] (./thesis.aux) ) 
+Here is how much of TeX's memory you used:
+ 7712 strings out of 492639
+ 122442 string characters out of 6135497
+ 455039 words of memory out of 5000000
+ 11503 multiletter control sequences out of 15000+600000
+ 13691 words of font info for 53 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 41i,19n,49p,321b,1615s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/latxfont/lcircle1.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (34 pages, 273845 bytes).
+PDF statistics:
+ 179 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+

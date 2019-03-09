@@ -1,0 +1,64 @@
+Folgend sind die Laufzeiten der Programme sowie die Performance gelistet.
+Betrachtet wird nunr die reale Laufzeit, da die User- und Sys-Laufzeiten
+fuer GPU-Implementierungen irrelevant sind.
+
+1d-Fall (float):
+================
+CPU:		0m0.357s
+GPU iter:	0m2.011s
+GPU noiter:	0m0.900s
+
+=> CPU / GPU iter = 0.0001775236200895077
+   CPU / GPU noiter = 0.00039666666666666664
+   GPU iter / GPU noiter = 2.2344444444444442
+
+
+1d-Fall (double):
+=================
+CPU:		0m0.330s
+GPU iter:	0m0.973s
+GPU noiter:	0m1.844s
+
+=> CPU / GPU iter = 0.33880903490759756
+   CPU / GPU noiter = 0.1789587852494577
+   GPU noiter / GPU iter = 1.895169578622816
+
+2d-Fall (float):
+================
+CPU:		0m18.878s
+GPU2 iter:	0m6.056s
+GPU1 noiter:	0m7.311s
+
+=> CPU / GPU noiter = 2.5821365066338395
+   CPU / GPU iter = 3.1172391017173053
+   GPU noiter / GPU iter = 1.20723249669749
+
+2d-Fall (double):
+=================
+CPU:		0m17.720s
+GPU iter:	0m11.058s	
+GPU noiter:	0m11.287s
+
+=> CPU / GPU iter = 1.6024597576415265
+   CPU / GPU noiter = 1.5699477274740852
+   GPU noiter / GPU iter = 1.0207089889672636
+
+3d-Fall (float):
+================
+CPU:		11429100us
+GPU iter:	11353us
+GPU noiter:	701052us
+
+=> CPU / GPU iter = 1006.7030740773364
+   CPU / GPU noiter = 16.302784957463924
+   GPU noiter / GPU iter = 61.750374350391965
+
+3d-Fall (double):
+================
+CPU:		11348500us
+GPU iter:	91852us
+GPU noiter:	1305535us
+
+=> CPU / GPU iter = 123.55201846448635
+   CPU / GPU noiter = 8.692604947397044
+   GPU noiter / GPU iter = 14.213462962156513 

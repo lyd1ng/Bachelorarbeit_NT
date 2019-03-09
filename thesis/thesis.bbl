@@ -1,0 +1,193 @@
+\begin{thebibliography}{28}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Globus et~al.()Globus, Linden, and John]{nasa_ea_antenna}
+Al~Globus, Derek~S. Linden, and Jason~D. John.
+\newblock Automated antenna design with evolutionary algorithms.
+\newblock
+  "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.102.9841\&rep=rep1\&type=pdf".
+
+\bibitem[R.~Kourant(1928)]{fdtd_u}
+H.~Lewy R.~Kourant, K.~Friedrichs.
+\newblock Über die partiellen differenzengleichungen der mathematischen
+  physik, 1928.
+
+\bibitem[Hagness(2005)]{fdtd_history}
+Hagness.
+\newblock \emph{Computational Electrodynamics: The Finite-Difference
+  Time-Domain Method, 3rd ed}.
+\newblock Artech House, 2005.
+
+\bibitem[Steunfeld()]{mathepedia_numerische_verfahren}
+Thomas Steunfeld.
+\newblock Liste numerischer verfahren.
+\newblock "https://mathepedia.de/Numerische_Verfahren.html".
+
+\bibitem[Luebbers and H.S()]{advanced_gap_feed}
+R.J Luebbers and Langdon H.S.
+\newblock A simple feed model that reduces time steps needed for fdtd antenna
+  and microstip calculations.
+\newblock
+  "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.461.3208\&rep=rep1\&type=pdf".
+
+\bibitem[Rumpf({\natexlab{a}})]{gausz_law_electric}
+Prof.~Raymond Rumpf.
+\newblock Lecture 4 -- electromagnetics and fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 4 -- Electromagnetics and
+  FDTD.pdf", {\natexlab{a}}.
+\newblock Seite 3.
+
+\bibitem[Rumpf({\natexlab{b}})]{gausz_law_magnetic}
+Prof.~Raymond Rumpf.
+\newblock Lecture 4 -- electromagnetics and fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 4 -- Electromagnetics and
+  FDTD.pdf", {\natexlab{b}}.
+\newblock Seite 4.
+
+\bibitem[Rumpf({\natexlab{c}})]{amperes_law}
+Prof.~Raymond Rumpf.
+\newblock Lecture 4 -- electromagnetics and fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 4 -- Electromagnetics and
+  FDTD.pdf", {\natexlab{c}}.
+\newblock Seite 4.
+
+\bibitem[Rumpf({\natexlab{d}})]{induction_law}
+Prof.~Raymond Rumpf.
+\newblock Lecture 4 -- electromagnetics and fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 4 -- Electromagnetics and
+  FDTD.pdf", {\natexlab{d}}.
+\newblock Seite 5.
+
+\bibitem[Rumpf({\natexlab{e}})]{constitutive}
+Prof.~Raymond Rumpf.
+\newblock Lecture 4 -- electromagnetics and fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 4 -- Electromagnetics and
+  FDTD.pdf", {\natexlab{e}}.
+\newblock Seite 9.
+
+\bibitem[Rumpf({\natexlab{f}})]{normalize_h_field}
+Prof.~Raymond Rumpf.
+\newblock Lecture 5 -- formulation of 1d fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 5 -- Formulation of 1D
+  FDTD.pdf", {\natexlab{f}}.
+\newblock Seite 11.
+
+\bibitem[Rumpf({\natexlab{g}})]{fdtd_stabilitaet}
+Prof.~Raymond Rumpf.
+\newblock Lecture 4 -- electromagnetics and fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 4 -- Electromagnetics and
+  FDTD.pdf", {\natexlab{g}}.
+\newblock Seite 24.
+
+\bibitem[Rumpf({\natexlab{h}})]{approximation_time}
+Prof.~Raymond Rumpf.
+\newblock Lecture 4 -- electromagnetics and fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 4 -- Electromagnetics and
+  FDTD.pdf", {\natexlab{h}}.
+\newblock Seite 26.
+
+\bibitem[Rumpf({\natexlab{i}})]{diagonal_tensors}
+Prof.~Raymond Rumpf.
+\newblock Lecture 5 -- formulation of 1d fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 5 -- Formulation of 1D
+  FDTD.pdf", {\natexlab{i}}.
+\newblock Seite 13.
+
+\bibitem[{Yee}(1966)]{yee_original}
+K.~{Yee}.
+\newblock {Numerical solution of inital boundary value problems involving
+  maxwell's equations in isotropic media}.
+\newblock \emph{IEEE Transactions on Antennas and Propagation}, 14:\penalty0
+  302--307, May 1966.
+\newblock \doi{10.1109/TAP.1966.1138693}.
+
+\bibitem[Rumpf({\natexlab{j}})]{dimension_reduction}
+Prof.~Raymond Rumpf.
+\newblock Topic 2b building geometries into data arrays.
+\newblock "http://emlab.utep.edu/ee4386_5301cmee/Topic 2b -- Building
+  Geometries into Data Arrays.pdf", {\natexlab{j}}.
+\newblock Seite 7.
+
+\bibitem[Rumpf({\natexlab{k}})]{grid_stability_condition}
+Prof.~Raymond Rumpf.
+\newblock Topic 2b building geometries into data arrays.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 6 -- Implementation0lf 1D
+  FDTD.pdf", {\natexlab{k}}.
+\newblock Seite 13.
+
+\bibitem[Rumpf({\natexlab{l}})]{time_stability_condition}
+Prof.~Raymond Rumpf.
+\newblock Topic 2b building geometries into data arrays.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 6 -- Implementation0lf 1D
+  FDTD.pdf", {\natexlab{l}}.
+\newblock Seite 18.
+
+\bibitem[Rumpf({\natexlab{m}})]{sources}
+Prof.~Raymond Rumpf.
+\newblock Lecture 6 -- implementation of 1d fdtd.pdf.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 6 -- Implementation of 1D
+  FDTD.pdf", {\natexlab{m}}.
+\newblock Seite 25.
+
+\bibitem[Rumpf({\natexlab{n}})]{ramped_sin}
+Prof.~Raymond Rumpf.
+\newblock Implementation of 1d fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 6 -- Implementation of 1D
+  FDTD.pdf", {\natexlab{n}}.
+\newblock Youtube Video.
+
+\bibitem[Rumpf({\natexlab{o}})]{dirichlet_nbc}
+Prof.~Raymond Rumpf.
+\newblock Implementation of one dimensional fdtd.
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 6 -- Implementation of 1D
+  FDTD.pdf", {\natexlab{o}}.
+\newblock Seite 10.
+
+\bibitem[Schneider()]{introduction_pml}
+John Schneider.
+\newblock Chapter 11 perfectly matched layer.
+\newblock "https://www.eecs.wsu.edu/~schneidj/ufdtd/chap11.pdf".
+\newblock Seite 307.
+
+\bibitem[Rumpf({\natexlab{p}})]{derivation_pml}
+Prof.~Raymond Rumpf.
+\newblock The perfectly matched layer (pml).
+\newblock http://emlab.utep.edu/ee5390fdtd/Lecture 13 -- The Perfectly Matched
+  Layer.pdf, {\natexlab{p}}.
+
+\bibitem[Rumpf({\natexlab{q}})]{loss_in_fd}
+Prof.~Raymond Rumpf.
+\newblock The perfectly matched layer (pml).
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 13\ --\ The Perfectly
+  Matched Layer.pdf", {\natexlab{q}}.
+\newblock Seite 9.
+
+\bibitem[Rumpf({\natexlab{r}})]{matched_impedance}
+Prof.~Raymond Rumpf.
+\newblock The perfectly matched layer (pml).
+\newblock "http://emlab.utep.edu/ee5390fdtd/Lecture 13 -- The Perfectly Matched
+  Layer.pdf", {\natexlab{r}}.
+\newblock Seite 17.
+
+\bibitem[Group()]{opencl_overview}
+Khronos Group.
+\newblock Opencl overview.
+\newblock "https://www.khronos.org/opencl/".
+
+\bibitem[Munshi et~al.(2011)Munshi, Gaster, Mattson, Fung, and
+  Ginsburg]{oclpg_execution_model}
+Aaftab Munshi, Benedic~R. Gaster, Timothy~G. Mattson, James Fung, and Dan
+  Ginsburg.
+\newblock \emph{OpenCL Programming Guide}.
+\newblock Pearson Education, 2011.
+
+\bibitem[Krischke(2013)]{dipol_antenna}
+Alois Krischke.
+\newblock \emph{Rothammels Antennenbuch}.
+\newblock DARC Verlag, 2013.
+
+\end{thebibliography}

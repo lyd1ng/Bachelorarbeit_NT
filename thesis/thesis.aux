@@ -1,0 +1,118 @@
+\relax 
+\citation{nasa_ea_antenna}
+\citation{nasa_ea_antenna}
+\citation{fdtd_u}
+\citation{fdtd_history}
+\citation{mathepedia_numerische_verfahren}
+\citation{advanced_gap_feed}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Einleitung}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Motivation}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Stand der Technik}{2}}
+\citation{fdtd_u}
+\citation{gausz_law_electric}
+\citation{gausz_law_magnetic}
+\citation{amperes_law}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Loesen der Maxwellgleichungen durch die FDTD-Methode}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Maxwellgleichungen}{3}}
+\newlabel{eq:gausz_law_e}{{1}{3}}
+\newlabel{eq:gausz_law_e@cref}{{[equation][1][]1}{[1][3][]3}}
+\newlabel{eq:gausz_law_h}{{2}{3}}
+\newlabel{eq:gausz_law_h@cref}{{[equation][2][]2}{[1][3][]3}}
+\citation{induction_law}
+\citation{constitutive}
+\citation{constitutive}
+\newlabel{eq:constitutive1}{{5}{4}}
+\newlabel{eq:constitutive1@cref}{{[equation][5][]5}{[1][4][]4}}
+\newlabel{eq:constitutive2}{{6}{4}}
+\newlabel{eq:constitutive2@cref}{{[equation][6][]6}{[1][4][]4}}
+\newlabel{eq:nabla_h}{{9}{4}}
+\newlabel{eq:nabla_h@cref}{{[equation][9][]9}{[1][4][]4}}
+\newlabel{eq:nabla_e}{{10}{4}}
+\newlabel{eq:nabla_e@cref}{{[equation][10][]10}{[1][4][]4}}
+\citation{normalize_h_field}
+\citation{fdtd_stabilitaet}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Mathematische Stabilitaetsbedingungen fuer finite Differenzen}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Anwenden der FDTD auf die Maxwellgleichungen}{6}}
+\citation{approximation_time}
+\citation{diagonal_tensors}
+\citation{yee_original}
+\newlabel{eq:eg_unstable}{{44}{9}}
+\newlabel{eq:eg_unstable@cref}{{[equation][44][]44}{[1][8][]9}}
+\citation{dimension_reduction}
+\citation{grid_stability_condition}
+\newlabel{eq:update_hx_npml}{{59}{11}}
+\newlabel{eq:update_hx_npml@cref}{{[equation][59][]59}{[1][10][]11}}
+\newlabel{eq:update_ex_npml}{{62}{11}}
+\newlabel{eq:update_ex_npml@cref}{{[equation][62][]62}{[1][10][]11}}
+\citation{grid_stability_condition}
+\citation{time_stability_condition}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Physikalische Stabilitaetsbedingungen fuer finite Differenzen}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Geometrie in der FDTD}{12}}
+\citation{sources}
+\citation{advanced_gap_feed}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Quellen in der FDTD-Methode}{13}}
+\citation{advanced_gap_feed}
+\citation{ramped_sin}
+\citation{dirichlet_nbc}
+\citation{introduction_pml}
+\citation{derivation_pml}
+\citation{loss_in_fd}
+\citation{matched_impedance}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Numerisches Randwertproblem}{14}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Perfectly Matched Layer (PML)}{15}}
+\newlabel{eq:c_1overb}{{82}{16}}
+\newlabel{eq:c_1overb@cref}{{[equation][82][]82}{[1][16][]16}}
+\newlabel{unstable_integral}{{133}{21}}
+\newlabel{unstable_integral@cref}{{[equation][133][]133}{[1][21][]21}}
+\citation{opencl_overview}
+\citation{oclpg_execution_model}
+\citation{oclpg_execution_model}
+\newlabel{eq:update_ex_pml}{{144}{23}}
+\newlabel{eq:update_ex_pml@cref}{{[equation][144][]144}{[1][22][]23}}
+\newlabel{eq:update_hx_pml}{{145}{23}}
+\newlabel{eq:update_hx_pml@cref}{{[equation][145][]145}{[1][22][]23}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Implementierung der FDTD}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}OpenCL}{23}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Implementieren der Dirichlet-Boundary-Condition}{24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Referenzimplementierung in C}{25}}
+\@writefile{lol}{\contentsline {lstlisting}{fdtd3d\textunderscore seq.c}{25}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Implementierung fuer einen Zeitschritt}{25}}
+\@writefile{lol}{\contentsline {lstlisting}{fdtd3d\textunderscore noiter.cl}{26}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Implementierung fuer mehrere Zeitschritte}{28}}
+\@writefile{lol}{\contentsline {lstlisting}{fdtd3d\textunderscore iter.cl}{28}}
+\citation{dipol_antenna}
+\citation{dipol_antenna}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Benchmarking}{30}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Simulation einer \(\lambda \)-Dipolantenne}{30}}
+\bibdata{cites}
+\bibcite{nasa_ea_antenna}{Globus et\nobreakspace  {}al.()Globus, Linden, and John}
+\bibcite{fdtd_u}{R.\nobreakspace  {}Kourant(1928)}
+\bibcite{fdtd_history}{Hagness(2005)}
+\bibcite{mathepedia_numerische_verfahren}{Steunfeld()}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Richtcharakteristik eine \(\lambda \)-Dipolantenne bei symmetrischer Einspeisung\relax }}{31}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Zusammenfassung und Ausblicke}{31}}
+\bibcite{advanced_gap_feed}{Luebbers and H.S()}
+\bibcite{gausz_law_electric}{Rumpf({a})}
+\bibcite{gausz_law_magnetic}{Rumpf({b})}
+\bibcite{amperes_law}{Rumpf({c})}
+\bibcite{induction_law}{Rumpf({d})}
+\bibcite{constitutive}{Rumpf({e})}
+\bibcite{normalize_h_field}{Rumpf({f})}
+\bibcite{fdtd_stabilitaet}{Rumpf({g})}
+\bibcite{approximation_time}{Rumpf({h})}
+\bibcite{diagonal_tensors}{Rumpf({i})}
+\bibcite{yee_original}{{Yee}(1966)}
+\bibcite{dimension_reduction}{Rumpf({j})}
+\bibcite{grid_stability_condition}{Rumpf({k})}
+\bibcite{time_stability_condition}{Rumpf({l})}
+\bibcite{sources}{Rumpf({m})}
+\bibcite{ramped_sin}{Rumpf({n})}
+\bibcite{dirichlet_nbc}{Rumpf({o})}
+\bibcite{introduction_pml}{Schneider()}
+\bibcite{derivation_pml}{Rumpf({p})}
+\bibcite{loss_in_fd}{Rumpf({q})}
+\bibcite{matched_impedance}{Rumpf({r})}
+\bibcite{opencl_overview}{Group()}
+\bibcite{oclpg_execution_model}{Munshi et\nobreakspace  {}al.(2011)Munshi, Gaster, Mattson, Fung, and Ginsburg}
+\bibcite{dipol_antenna}{Krischke(2013)}
+\bibstyle{unsrtnat}

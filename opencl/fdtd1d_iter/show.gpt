@@ -1,0 +1,21 @@
+# This script renders block data into an animated gif file
+# The neccessary parameters are:
+# output_file: The output file for the animated gif
+# min_, max_yrange: The min and max of the y range
+# min_, max_xrange: The min and max of the x range
+# _delay: The delay between frames
+
+
+set terminal gif animate delay _delay
+set out output_file
+set yrange [min_yrange: max_yrange]
+set xrange [min_xrange: max_xrange]
+
+stats data_file nooutput
+
+do for [i=1:int(STATS_blocks)] {
+	set multiplot
+	plot data_file index(i) with lines
+	unset multiplot
+}
+set output
